@@ -1,0 +1,30 @@
+$theme-colors: (
+    "primary": #42A0E5,
+    "secondary":#26313A,
+    "dark":#0C1620,
+    "gray-800":#7A7A7A,
+    "gray-600":#C0C9D7,
+    "gray-500":#E5E6EB,
+    "gray-400":#EBF0F4,
+    "gray-200":#F0F4F7,
+    "success":#95CF54,
+    "warning":#EBE48F,
+    "danger": #FF485F
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+$body-bg: theme-color("gray-200");
+$body-color: theme-color("dark");
+$border-color: theme-color("gray-500");
+$sidebar-bg:$white;
+$sidebar-bg-hover:theme-color("gray-400");;
+
+@import 'components/misc';
+@import 'components/sidebar';
+@import 'components/typography';
+@import 'components/navbar-top';
+@import 'components/section-header';
+@import 'components/avatars';
+@import 'components/card';
+@import 'components/utilities';

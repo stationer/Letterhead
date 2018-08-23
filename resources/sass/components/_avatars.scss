@@ -1,0 +1,34 @@
+.avatar-group {
+  a {
+    margin-right:-10px;
+    &:last-child {
+      margin-right:0;
+    }
+  }
+}
+
+.avatar {
+  &.avatar-sm {
+    text-decoration:none;
+    img {
+      width:45px;
+      height:45px;
+    }
+  }
+  &.avatar-lg {
+    .avatar-img {
+      width:64px !important;
+      height:64px !important;
+    }
+  }
+  &.avatar-xs {
+    .avatar-img {
+      width: 25px !important;
+      height:25px !important;
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  display:none;
+}

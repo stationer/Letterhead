@@ -1,0 +1,25 @@
+{
+  "name": "letterhead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "feather-icons": "^4.7.3"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "chart.js": "^2.7.2",
+    "cross-env": "^5.2.0",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.1.11",
+    "popper.js": "^1.14.4"
+  }
+}

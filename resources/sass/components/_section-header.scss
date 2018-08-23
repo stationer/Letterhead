@@ -1,0 +1,42 @@
+.header {
+  margin-bottom: 2rem;
+
+  .header-pretitle {
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #95aac9;
+    font-weight:700;
+    margin-bottom:.5625rem
+  }
+
+  .header-title {
+    margin-bottom: 0;
+  }
+
+  .header-subtitle {
+    margin-top: .375rem;
+    margin-bottom: 0;
+    color: #95aac9;
+  }
+
+  .header-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e3ebf6;
+
+    .header-tabs {
+      margin-bottom: -1.5rem;
+      border-bottom-width: 0px;
+      .nav-link {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &.bg-dark {
+    .header-body {
+      border-bottom-color: rgba(227,235,246,.1);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/***********************************************
+ * Font Sizes
+***********************************************/
+$font-sizes: (
+    h1 1.625rem,
+    h2 1.25rem,
+    h3 1.0625rem,
+    h4 .9375rem,
+    h5 .8125rem,
+    h6 .625rem,
+);
+
+@each $size in $font-sizes {
+  #{nth($size,1)} {
+    margin-top: 0;
+    margin-bottom: 1.125rem
+  }
+  .#{nth($size,1)}, #{nth($size,1)} {
+    font-size: nth($size, 2);
+    font-family: inherit;
+    line-height: 1.1;
+    margin-bottom: 1.125rem;
+    color: inherit;
+    font-weight:600;
+  }
+}
+
+/***********************************************
+ * Font Colors
+***********************************************/
+$types: (
+    gray-light #95aac9,
+);
+
+@each $type in $types {
+  .text-#{nth($type,1)} {
+    color: nth($type, 2);
+  }
+}
+
+/***********************************************
+ * Font Weights
+***********************************************/
+
+$weights: (
+    300,400,500,600,700,800,900,
+);
+
+@each $weight in $weights {
+  .weight-#{nth($weight,1)} {
+    font-weight: nth($weight, 1);
+  }
+}
+
+/***********************************************
+ * Text Transformations
+***********************************************/
+$transformations: (
+    uppercase,lowercase,capitalize
+);
+
+@each $transformation in $transformations {
+  .transform-#{nth($transformation,1)} {
+    text-transform: nth($transformation, 1);
+  }
+}
+/***********************************************
+ * Letter Spacing
+***********************************************/
+$letter-spacings: (
+        sm -.02em,
+        md .08em,
+);
+
+@each $letter-spacing in $letter-spacings {
+  .letter-spacing-#{nth($letter-spacing,1)} {
+    letter-spacing: nth($letter-spacing, 2);
+  }
+}
+
+/***********************************************
+ * MISC
+***********************************************/
+p {
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+
+
+.h4, .h5, .h6, h4, h5, h6 {
+  margin-bottom: .5625rem;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #e3ebf6
+}
+
+.small, small {
+  font-size: .8125rem;
+  font-weight: 400
+}
+
+.metric-title {
+  font-size:2.1rem;
+  font-weight:400;
+  margin-bottom:0;
+  &.small {
+    font-size:1.25rem !important;
+  }
+}
