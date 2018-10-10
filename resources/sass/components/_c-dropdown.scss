@@ -1,0 +1,67 @@
+.c-dropdown {
+    position: relative;
+    &> a{
+        color:$dark;
+        &:hover{
+            text-decoration: none;
+        }
+        svg {
+            width: 17px;
+            height: 17px;
+            margin-top: -2px;
+            vertical-align: middle;
+            @include transition(transform .25s);
+        }
+    }
+    & > [data-toggle="dropdown"] {
+        cursor: pointer;
+    }
+    &.show {
+        &> a{
+            color:$dark;
+            svg {
+                transform: rotate(180deg)
+            }
+        }
+        .dropdown-menu {
+            display: block;
+            opacity: 1;
+            height: auto;
+            padding: 10px 0;
+            border: solid 1px #ebf0f4;
+        }
+    }
+    .dropdown-menu {
+        display: block;
+        height: 0;
+        z-index: 1;
+        background: $panel-bg;
+        border-radius: 6px;
+        @include box-shadow;
+        overflow: hidden;
+        list-style-type: none;
+        @include transition(opacity .25s);
+        position: absolute;
+        min-width: 100%;
+        right: 0;
+        padding: 0;
+        text-align: left;
+        white-space: nowrap;
+        opacity: 0;
+        &> li{
+            &> a {
+                font-family:$font-family-base ;
+                font-weight: $font-weight-normal;
+                font-size: $font-size-sm;
+                color: $dark-gray;
+                width: 100%;
+                padding: 0.5rem 1.5rem;
+                display: block;
+                &:hover{
+                    color: $dark;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.muli {
+	font-family: 'Muli', sans-serif;
+}
+.font-preview {
+	margin-bottom: 0px;
+}
+
+.font-preview .font-preview-title {
+	font-size: 4.5rem;
+}
+.font-preview p.font-preview-p {
+	font-size: 0.9375rem;
+	line-height: 1.3;
+}
+.font-preview h6:first-of-type{
+	margin-top:0px;
+}
+.font-preview .normal {
+	font-weight: 400;
+}
+.font-preview .bold {
+	font-weight: 900;
+}
+.font-preview .font-preview-style {
+	border-left: solid 1px #ebf0f4;
+}
+.font-preview .font-preview-style p {
+	margin: 5px;
+}
+.color-swatch {
+	margin-bottom: 30px;
+}
+.color-swatch .top-swatch {
+	height: 80px;
+}
+.color-swatch .swatch-detail {
+	padding: 15px 0px;
+}
+.primary {
+	background-color: #42a0e5;
+}
+.secondary {
+	background-color: #26313a;
+}
+.dark {
+	background-color: #0c1620;
+}
+.dark-gray {
+	background-color: #7a7a7a;
+}
+.gray {
+	background-color: #c0c9d7;
+}
+.light-gray {
+	background-color: #ebf0f4;
+}
+.lighter-gray {
+	background-color: #f0f4f7;
+}
+.success {
+	background-color: #95cf54;
+}
+.warning {
+	background-color: #ebe48f;
+}
+.danger {
+	background-color: #ff485f;
+}
+.panel-border {
+	background-color: #e5e6eb;
+}
+.panel-bg {
+	background-color: #ffffff;
+}
+#icon .icon-detail {
+	padding: 30px;
+	background: #ebf0f4;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#icon .icon-detail p:last-child {
+	margin-bottom: 0;
+}
+#icon .icons .icon-item {
+	margin: 0 auto 60px auto;
+	text-align: center;
+}
+#icon .icons .icon-item h4 {
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+#icon .icons .icon-item svg{
+	margin-bottom: 15px;
+	width: 30px;
+}
+#icon .icons .icon-item svg:hover {
+	color: #42a0e5;
+}
+.edit-overlay {
+	margin-left: 15px;
+}
+ul.tabs li {
+	cursor: pointer;
+}
+.select {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 33.33333333%;
+	flex: 0 0 33.33333333%;
+	max-width: 33.33333333%;
+}

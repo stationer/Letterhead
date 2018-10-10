@@ -1,0 +1,27 @@
+.c-search {
+    @include make-row();
+    margin: 0 0 15px 0;
+    input {
+        border-bottom: none;
+    }
+    select,
+    input[type="checkbox"] {
+        display: inline;
+        width: auto;
+        margin-left: 5px;
+    }
+    .form-group{
+        margin-bottom: 0;
+        .c-select {
+            width: auto;
+            select {
+                padding-right: 30px;
+                background-color: $light-gray;
+                border-radius: 5px;
+                height: rem(43px);
+                color: $dark-gray;
+                background-size: 12px 12px;
+            }
+        }
+    }
+}

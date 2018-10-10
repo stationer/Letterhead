@@ -1,0 +1,131 @@
+.c-card{
+    background: $panel-bg;
+    border-radius: 6px;
+    @include box-shadow;
+    border: solid 1px #ebf0f4;
+    margin-bottom: 30px;
+    .header {
+        @include flexbox();
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid $light-gray;
+        border-radius: $radius $radius 0px 0px;
+        h5 {
+            line-height: 32px;
+            font-weight: $font-weight-bold;
+            margin: 0;
+            text-transform: none;
+        }
+        div {
+            &:first-of-type {
+                flex-grow: 1;
+            }
+        }
+        ul.c-tabs {
+            font-family:$font-family-headings ;
+            font-size: $font-size-sm;
+            line-height: 32px;
+            font-weight: $font-weight-black;
+            &> li {
+                display: inline-block;
+                margin-right: 15px;
+                position: relative;
+                color: $dark-gray;
+
+                .c-dropdown {
+                    color: $dark-gray;
+                    & > a {
+                        color: $dark-gray;
+                        &:hover{
+                            text-decoration: none;
+                            color: $dark;
+                        }
+                    }
+                    &.show {
+                        & > a {
+                            color: $dark;
+                        }
+                    }
+                }
+
+                &> a{
+                    color: $dark-gray;
+                    &:hover{
+                        text-decoration: none;
+                        color: $dark;
+                    }
+                }
+                &.active {
+                    color: $dark;
+                    a{
+                        color: $dark;
+                    }
+
+                    &:after {
+                        height: 2px;
+                        position: absolute;
+                        bottom: -14px;
+                        left: 0;
+                        right: 0;
+                        content: '';
+                        background: $primary;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .footer {
+        text-align: right;
+        border-top: 1px solid $light-gray;
+        border-radius: 0px 0px $radius $radius;
+    }
+    .header,
+    .footer {
+        padding: 12px 20px;
+        .buttons {
+            button {
+                &:last-of-type {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .content {
+        padding: 20px 20px;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6{
+            &:first-of-type{
+                margin-top:0;
+            }
+        }
+    }
+    &.c-options {
+        .footer {
+            border-top: none;
+            .c-btn {
+                @extend %m-md;
+                &:first-of-type {
+                    @extend %m-outline;
+                }
+            }
+        }
+    }
+    .tabs-content{
+        .tab-pane{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

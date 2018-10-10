@@ -1,0 +1,55 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    tr {
+        th {
+            padding: 12px 0 12px 10px;
+            text-transform: uppercase;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-xs;
+            background: $light-gray;
+            color: $gray;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+        td {
+            line-height: 1;
+            border-bottom: solid 1px $light-gray;
+            padding: 11px 0 11px 10px;
+            font-size: rem(15px);
+            &:first-of-type {
+                padding-left: 20px;
+            }
+            &:nth-child(2) {
+                font-weight: $font-weight-bold
+            }
+            svg {
+                margin-right: 10px;
+            }
+            a {
+                color: $dark;
+                &:last-of-type {
+                    svg {
+                        margin-right: 0;
+                    }
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        td,th{
+            &.table-actions{
+                //text-align: center;
+            }
+        }
+        & [data-sort]{
+        cursor: pointer;
+            &:after{
+                margin-left: .25rem;
+                content: url("data:image/svg+xml;utf8,<svg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z' fill='%2395AAC9'/></svg>");
+            }
+        }
+    }
+}

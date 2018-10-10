@@ -1,0 +1,28 @@
+{
+  "name": "letterhead",
+  "version": "0.0.1",
+  "description": "Admin Dashboard Starter",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Andrew Leach",
+  "license": "MIT",
+  "dependencies": {
+    "feather-icons": "^4.7.3",
+    "highlight.js": "^9.13.1",
+    "list.js": "^1.5.0",
+    "node-sass": "^4.9.3",
+    "sass-rem": "^2.0.1"
+  },
+  "devDependencies": {
+    "bootstrap-4-grid": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.1.14",
+    "normalize.css": "^8.0.0",
+    "bootstrap-reboot-import": "^4.1.3"
+  }
+}

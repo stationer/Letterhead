@@ -1,0 +1,122 @@
+.c-side-nav {
+    & > li {
+        padding-left: 1.5rem;
+        color: #fff;
+        &:hover {
+            & > a {
+                border-right: 3px solid $primary;
+                @include transition(border-right .25s);
+                text-decoration: none;
+                svg {
+                    color: $primary;
+                }
+                div {
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        a {
+            display: flex;
+            align-items: center;
+            line-height: 18px;
+            color: #fff;
+            padding: rem(12px);
+            padding-left: 0;
+            padding-right: 0;
+            border-right: 3px solid $secondary;
+            font-size: $font-size-sm;
+            div {
+                position: absolute;
+                right: 20px;
+                svg {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            svg {
+                width: 17px;
+                height: 17px;
+                //position: relative;
+                margin-right: 8px;
+                vertical-align: bottom;
+                @include transition(transform .25s);
+            }
+            &.active {
+                border-right: 3px solid $primary;
+                div {
+                    svg {
+                        transform: rotate(180deg)
+                    }
+                }
+                & ~ ul {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    font-size: $font-size-sm;
+                    li {
+                        border-right: 3px solid $primary;
+                        a.active {
+                            border-right: 0px solid $primary;
+                        }
+                        ul {
+                            li {
+                                border-right: 0px solid $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & > ul {
+            padding: 0 0 0 rem(25px);
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            position: relative;
+            font-size: $font-size-sm;
+            & > li {
+                a {
+                    color: $gray;
+                    padding: rem(12px);
+                    padding-left: 0;
+                    font-size: $font-size-xs;
+                    &:hover {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+                //Second Level
+                & > ul {
+                    padding: 0 0 0 rem(25px);
+                    margin: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    position: relative;
+                    font-size: $font-size-sm;
+                    li {
+                        a {
+                            &.active {
+                                border-right: 3px solid $primary;
+                                div {
+                                    svg {
+                                        transform: rotate(180deg)
+                                    }
+                                }
+                                & ~ ul {
+                                    //display: block;
+                                    margin-bottom: 0.5rem;
+                                    li {
+                                        border-right: 3px solid $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

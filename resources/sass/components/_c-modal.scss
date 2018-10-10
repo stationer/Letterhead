@@ -1,0 +1,69 @@
+.c-modal {
+    @extend .c-card;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba($dark, 0.8);
+    border: none;
+    border-radius: 0px;
+    & .modal-content {
+        background-color: #fff;
+        margin: 40% 15px;
+        width: calc(100% - 30px);
+        @include box-shadow;
+        animation-name: modalopen;
+        animation-duration: 0.5s;
+        z-index: 12;
+        @media (min-width: 768px) {
+            margin: 1.75rem auto;
+            width: 460px;
+        }
+        & > .header {
+            background: $border;
+            border: none;
+            border-radius: 0px;
+            h3 {
+                margin: 6px 0;
+                font-weight: normal;
+                text-transform: none;
+                flex-grow: 1;
+                color:$dark;
+            }
+            a {
+                text-align: right;
+                cursor: pointer;
+                svg {
+                    width: rem(18px);
+                    height: rem(18px);
+                    color: $dark-gray;
+                }
+                &:hover {
+                    svg {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+        & > .footer {
+            .c-btn {
+                @extend %m-md;
+                &:first-of-type {
+                    @extend %m-outline;
+                }
+            }
+        }
+    }
+}
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

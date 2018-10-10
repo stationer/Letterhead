@@ -1,0 +1,24 @@
+body {
+	background: $light-gray;
+	font-family: $font-family-base;
+	color: $dark;
+}
+html,
+body {
+	height: 100%;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+a {
+	text-decoration: none;
+	-webkit-text-decoration-skip: objects;
+	color: inherit;
+}
+:focus {
+	outline: transparent;
+}

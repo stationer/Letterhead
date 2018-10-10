@@ -1,0 +1,76 @@
+form {
+    width: 100%;
+    .form-group {
+        margin-bottom: 30px;
+        .c-check-btn {
+            color: #8d9092;
+            margin-bottom: 30px;
+            label {
+                font-weight: $font-weight-normal;
+                font-size: rem(16px);
+                text-transform: inherit;
+            }
+        }
+        .c-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            &:after {
+                color: $dark-gray;
+                z-index: 1;
+                width: 16px;
+                height: 16px;
+                pointer-events: none;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: 9px;
+                margin-top:-11px;
+                content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%237a7a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+                transform: scale(0.6);
+            }
+            select,
+            select option {
+                color: $dark;
+                outline: 0;
+            }
+
+            select:invalid,
+            select option:first-of-type {
+                color: $dark-gray;
+            }
+            [hidden] {
+                display: none;
+            }
+        }
+        input[type="search"]{
+            position: relative;
+            display: inline-block;
+            padding-left:30px;
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c0c9d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>') left 50% no-repeat;
+            background-size: 30px 15px;
+        }
+    }
+    .form-check{
+        position: relative;
+        display: block;
+        margin-left: 1.25rem;
+        margin-bottom: 15px;
+        .form-check-input {
+            position: absolute;
+            margin-top: .3rem;
+            margin-left: -1.25rem;
+            &:disabled~.form-check-label{
+                color: $gray;
+            }
+        }
+        .form-check-label{
+            display: inline-block;
+            margin-bottom: 0;
+            padding:0;
+            text-transform: none;
+            font-weight: 400;
+            font-size: $font-size-base;
+        }
+    }
+}

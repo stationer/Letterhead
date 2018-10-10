@@ -1,0 +1,37 @@
+.c-btn {
+    background: $primary;
+    color: #fff;
+    font-family: $font-family-base;
+    font-size: rem(12px);
+    display: inline-block;
+    padding: 6px 10px;
+    margin-bottom: 0;
+    line-height: rem(16px);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    border-radius: rem(5px);
+    border: 1px solid transparent;
+    @include transition(background .25s);
+    box-sizing: border-box;
+    &:hover {
+        background: darken($primary, 10%);
+        color:#fff;
+        text-decoration: none;
+    }
+}
+.c-upload {
+    @extend .c-btn;
+    & + input[type="file"] {
+        display: none;
+    }
+}

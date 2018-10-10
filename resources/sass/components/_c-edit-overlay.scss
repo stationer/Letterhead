@@ -1,0 +1,20 @@
+.c-edit {
+    background: $secondary;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+        color:#fff;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}

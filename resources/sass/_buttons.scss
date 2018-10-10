@@ -1,0 +1,13 @@
+//Modal
+.close {
+	//color: $dark;
+	border: none;
+	background-color: transparent;
+	font-size: rem(25px);
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		//color: lighten($dark, 10%);
+	}
+}
