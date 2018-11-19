@@ -19,16 +19,17 @@
     background-image: none;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
-    border-radius: rem(5px);
+    border-radius: $radius;
     border: 1px solid transparent;
     @include transition(background .25s);
     box-sizing: border-box;
     &:hover {
         background: darken($primary, 10%);
-        color:#fff;
+        color: #fff;
         text-decoration: none;
     }
 }
+
 .c-upload {
     @extend .c-btn;
     & + input[type="file"] {

@@ -1,47 +1,48 @@
 @mixin transition($transition) {
-	-webkit-transition: $transition ease-in-out;
-	-moz-transition: $transition ease-in-out;
-	-o-transition: $transition ease-in-out;
-	transition: $transition ease-in-out;
+    -webkit-transition: $transition ease-in-out;
+    -moz-transition: $transition ease-in-out;
+    -o-transition: $transition ease-in-out;
+    transition: $transition ease-in-out;
 }
+
 @mixin flexbox() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
+
 @mixin color_modifier($color) {
-	& svg {
-		color: $color;
-	}
-	&.c-btn {
-		background: $color;
-		&:hover {
-			background: darken($color, 10%);
-		}
-	}
-	&.m-outline {
-		background: transparent;
-		border-color: $color;
-		color: $color;
-		&:hover {
-			background: $color;
-			color: #fff;
-		}
-	}
-	&.c-badge{
-		color: darken($color,50%);
-		background-color: $color;
-		@if $color == $secondary {
-			color: #fff;
-		}
-	}
+    & svg {
+        color: $color;
+    }
+    &.c-btn {
+        background: $color;
+        &:hover {
+            background: darken($color, 10%);
+        }
+    }
+    &.m-outline {
+        background: transparent;
+        border-color: $color;
+        color: $color;
+        &:hover {
+            background: $color;
+            color: #fff;
+        }
+    }
+    &.c-badge {
+        color: darken($color, 50%);
+        background-color: $color;
+        @if $color == $secondary {
+            color: #fff;
+        }
+    }
 }
 
 @mixin box-shadow() {
-	-webkit-box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
-	-moz-box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
-	box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.06);
 }
-

@@ -1,6 +1,6 @@
-.c-card{
+.c-card {
     background: $panel-bg;
-    border-radius: 6px;
+    border-radius: $radius;
     @include box-shadow;
     border: solid 1px #ebf0f4;
     margin-bottom: 30px;
@@ -25,11 +25,11 @@
             }
         }
         ul.c-tabs {
-            font-family:$font-family-headings ;
+            font-family: $font-family-headings;
             font-size: $font-size-sm;
             line-height: 32px;
             font-weight: $font-weight-black;
-            &> li {
+            & > li {
                 display: inline-block;
                 margin-right: 15px;
                 position: relative;
@@ -39,7 +39,7 @@
                     color: $dark-gray;
                     & > a {
                         color: $dark-gray;
-                        &:hover{
+                        &:hover {
                             text-decoration: none;
                             color: $dark;
                         }
@@ -51,16 +51,16 @@
                     }
                 }
 
-                &> a{
+                & > a {
                     color: $dark-gray;
-                    &:hover{
+                    &:hover {
                         text-decoration: none;
                         color: $dark;
                     }
                 }
                 &.active {
                     color: $dark;
-                    a{
+                    a {
                         color: $dark;
                     }
 
@@ -103,9 +103,9 @@
         h3,
         h4,
         h5,
-        h6{
-            &:first-of-type{
-                margin-top:0;
+        h6 {
+            &:first-of-type {
+                margin-top: 0;
             }
         }
     }
@@ -120,10 +120,10 @@
             }
         }
     }
-    .tabs-content{
-        .tab-pane{
+    .tabs-content {
+        .tab-pane {
             display: none;
-            &.active{
+            &.active {
                 display: block;
             }
         }

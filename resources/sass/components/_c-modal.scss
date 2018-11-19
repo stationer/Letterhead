@@ -12,7 +12,7 @@
     border: none;
     border-radius: 0px;
     & .modal-content {
-        background-color: #fff;
+        background-color: $background;
         margin: 40% 15px;
         width: calc(100% - 30px);
         @include box-shadow;
@@ -32,7 +32,7 @@
                 font-weight: normal;
                 text-transform: none;
                 flex-grow: 1;
-                color:$dark;
+                color: $dark;
             }
             a {
                 text-align: right;
@@ -59,6 +59,7 @@
         }
     }
 }
+
 @keyframes modalopen {
     from {
         opacity: 0

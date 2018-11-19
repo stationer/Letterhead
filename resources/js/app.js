@@ -1,29 +1,27 @@
-import $ from 'jquery';
-import hljs from 'highlight.js';
 
-$(document).ready(function ($) {
+document.addEventListener("DOMContentLoaded", function() {
 
-	//Modal & Dropdowns
-	var modal_btn = document.querySelectorAll('[data-modal]');
-	var close_btn = document.querySelectorAll('[data-dismiss]');
+    //Modal & Dropdowns
+    var modal_btn = document.querySelectorAll('[data-modal]');
+    var close_btn = document.querySelectorAll('[data-dismiss]');
 
-	for (var i = 0; i < modal_btn.length; i++) {
-		var thisBtn = modal_btn[i];
-		thisBtn.addEventListener("click", function() {
-			var modal = document.getElementById(this.dataset.modal);
-			modal.style.display = "block";
+    for (var i = 0; i < modal_btn.length; i++) {
+        var thisBtn = modal_btn[i];
+        thisBtn.addEventListener("click", function() {
+            var modal = document.getElementById(this.dataset.modal);
+            modal.style.display = "block";
             modal.classList.add("opened");
-		}, false);
-	}
+        }, false);
+    }
 
-	for (var i = 0; i < close_btn.length; i++) {
-		var thisBtn = close_btn[i];
-		thisBtn.addEventListener("click", function() {
-			var modal = document.getElementById(this.dataset.dismiss);
-			modal.style.display = "none";
+    for (var i = 0; i < close_btn.length; i++) {
+        var thisBtn = close_btn[i];
+        thisBtn.addEventListener("click", function() {
+            var modal = document.getElementById(this.dataset.dismiss);
+            modal.style.display = "none";
             modal.classList.remove("opened");
-		}, false);
-	}
+        }, false);
+    }
 
     window.onclick = function(event) {
         var modal_open = document.getElementsByClassName('c-modal opened')[0];
@@ -73,7 +71,8 @@ $(document).ready(function ($) {
                     this.closest('li').classList.add('active');
 
                     // Remove existing active classes from tab panes
-                    tabpane.parentElement.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                    tabpane.parentElement.querySelectorAll('.tab-pane').forEach(
+                        pane => pane.classList.remove('active'));
                     tabpane.classList.add("active")
                 });
             });
@@ -83,37 +82,30 @@ $(document).ready(function ($) {
     Tab.initialize();
 
 
-	//Feather Icons initialize
-	feather.replace();
+    //Feather Icons initialize
+    feather.replace();
 
-	// Navigation Dropdown
-	var coll = document.querySelectorAll(".c-side-nav > li a");
-	var i;
+    // Navigation Dropdown
+    var coll = document.querySelectorAll(".c-side-nav > li a");
+    var i;
 
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function(event) {
-			this.classList.toggle("active");
-			let content = this.nextElementSibling;
-			if (content) {
-				event.preventDefault();
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function(event) {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content) {
+                event.preventDefault();
 
-				if (content.style.maxHeight) {
-					content.style.maxHeight = null;
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-					if (this.closest("ul.sub")) {
-						this.closest("ul.sub").style.maxHeight =
-							this.closest("ul.sub").scrollHeight + content.scrollHeight + "px";
-					}
-				}
-			}
-		});
-	}
-
-    hljs.initHighlighting('html');
-    var options_table = {
-        valueNames: [ 'title', 'status' , 'date' ]
-    };
-    var userList = new List('users', options_table);
-
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    if (this.closest("ul.sub")) {
+                        this.closest("ul.sub").style.maxHeight =
+                            this.closest("ul.sub").scrollHeight + content.scrollHeight + "px";
+                    }
+                }
+            }
+        });
+    }
 });

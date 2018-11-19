@@ -4,6 +4,7 @@
     padding: 1.5rem;
     text-align: center;
     img {
-        width: 100%;
+        max-width: 100%;
+        max-height: $c-brand-max-height;
     }
 }

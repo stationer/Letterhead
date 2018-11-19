@@ -10,14 +10,14 @@
         width: auto;
         margin-left: 5px;
     }
-    .form-group{
+    .form-group {
         margin-bottom: 0;
         .c-select {
             width: auto;
             select {
                 padding-right: 30px;
                 background-color: $light-gray;
-                border-radius: 5px;
+                border-radius: $radius;
                 height: rem(43px);
                 color: $dark-gray;
                 background-size: 12px 12px;
