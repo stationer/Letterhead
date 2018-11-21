@@ -1,13 +1,9 @@
-# A place for the developer 
+# A place for the developer
 _ignore
 
 # Package manager and utility files
 /vendor
-composer.lock
 /node_modules
-package-lock.json
-.sass-cache
-.ruby-version
 
 # Numerous always-ignore extensions
 *.diff

@@ -44,7 +44,7 @@ table {
                 //text-align: center;
             }
         }
-        & [data-sort] {
+        & [data-sort], & .sortable {
             cursor: pointer;
             &:after {
                 margin-left: .25rem;
