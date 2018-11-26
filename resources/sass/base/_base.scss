@@ -123,7 +123,7 @@ label {
     margin-bottom: 0;
 }
 
-input {
+input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]) {
     width: 100%;
     border: none;
 }
@@ -137,7 +137,7 @@ textarea {
     min-height: 50px;
 }
 
-input,
+input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]),
 textarea {
     padding: 12px 10px;
     line-height: $font-size-base;
@@ -146,7 +146,7 @@ textarea {
     }
 }
 
-input,
+input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]),
 textarea,
 select {
     font-family: $font-family-base;
