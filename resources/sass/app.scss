@@ -1,11 +1,12 @@
+// Letterhead Meta
+@import "variables";
 
 // Third Party Imports
 @import '~bootstrap-reboot-import/scss/bootstrap-reboot.scss';
 @import '~bootstrap-4-grid/scss/grid.scss';
 @import "~sass-rem/rem";
 
-// Letterhead Meta
-@import "variables";
+//Mixins
 @import "mixins";
 
 //Base

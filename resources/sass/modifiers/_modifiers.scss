@@ -121,3 +121,16 @@
         }
     }
 }
+
+.m-login {
+    margin-bottom: 30px;
+    .form-group {
+        label {
+            display: none;
+        }
+    }
+    & + p {
+        font-size: rem(13px);
+        text-align: center;
+    }
+}
