@@ -1,17 +1,4 @@
 nav {
-
-}
-
-main {
-    width: 100%;
-    position: relative;
-    @include transition(all .25s);
-    @media (min-width: 768px) {
-        padding: 0 25px;
-    }
-}
-
-.l-nav-left {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -28,86 +15,72 @@ main {
     }
 }
 
-.l-main-left {
+main {
     width: 100%;
     left: 0;
     position: relative;
     @include transition(all .25s);
     @include media-breakpoint-up(md) {
+        left: 250px;
+        width: calc(100% - 250px);
         padding: 0 25px;
-        left: 250px;
-        width: calc(100% - 250px);
-    }
-}
-
-.l-header-right {
-    @include flexbox();
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    position: relative;
-    left: 0px;
-    padding: 1.5rem 3.5rem;
-    @include media-breakpoint-up(md) {
-        padding: 1.5rem 2.5rem;
-        left: 250px;
-        width: calc(100% - 250px);
-        position: relative;
-        box-shadow: none;
-        margin-bottom: 40px;
     }
 }
 
 header {
-    display: flex;
+    @include flexbox();
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: auto;
     background: $background;
     position: relative;
     left: 0px;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 0.5rem 1rem 3rem;
     text-align: left;
     margin-bottom: 20px;
     z-index: 9;
     @include box-shadow;
     @include transition(left .25s);
+
+    @include media-breakpoint-up(md) {
+        padding: 1.5rem 2.5rem;
+        left: 250px;
+        width: calc(100% - 250px);
+        box-shadow: none;
+        margin-bottom: 40px;
+    }
     & > span, & > div {
         margin: auto;
         flex-grow: 1;
     }
-    & > div {
-        flex-grow: 1;
-        &:last-of-type {
-            @include flexbox();
-            justify-content: flex-end;
-            align-items: center;
-        }
-    }
-    h1 {
-        font-size: $font-size-base;
-        margin: 0;
+    & > span {
+        @include make-col-ready();
+        @include make-col(5);
         text-align: left;
         display: flex;
         align-items: center;
         height: 100%;
-        @include media-breakpoint-up(md) {
-            font-size: $font-size-md;
+        h1 {
+            font-size: $font-size-base;
+            margin: 0;
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-md;
+            }
         }
     }
     & > div {
-        //@include make-col-ready();
-        //@include make-col(7);
-        //text-align: right;
-        //align-items: center;
-        //@include flexbox();
-        //justify-content: flex-end;
+        @include make-col-ready();
+        @include make-col(7);
+        text-align: right;
+        align-items: center;
+        @include flexbox();
+        justify-content: flex-end;
 
-        //a {
-        //    vertical-align: middle;
-        //}
-    }
-    @include media-breakpoint-up(md) {
-        margin-bottom: 20px;
+        a {
+            vertical-align: middle;
+        }
     }
 }
 
@@ -147,32 +120,6 @@ section {
     }
 }
 
-.l-login {
-    @include make-col-ready();
-    @include make-col(12);
-    margin: 0 auto;
-    padding: 0;
-    h2 {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    @include media-breakpoint-up(sm) {
-        @include make-col-ready();
-        @include make-col(12);
-        padding: 0;
-    }
-    @include media-breakpoint-up(md) {
-        @include make-col-ready();
-        @include make-col(6);
-        padding: 0;
-    }
-    @include media-breakpoint-up(lg) {
-        @include make-col-ready();
-        @include make-col(5);
-        padding: 0;
-    }
-}
-
 #l-drawer-label {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -193,7 +140,7 @@ section {
         position: relative;
         left: 0;
         @include transition(left .25s);
-        top:1.1em;
+        top:0.5em;
     }
     @include media-breakpoint-up(md) {
         display: none;
@@ -236,4 +183,5 @@ section {
         @include make-col(5);
     }
 }
+
 //TODO check col breakpoints for @includes
