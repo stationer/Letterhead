@@ -1,0 +1,26 @@
+.c-drag{
+    td.c-drag-list,div.c-drag-list{
+       background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'><defs><style>.cls-1{fill:%23c0c9d7;}</style></defs><title>icon-drag</title><circle class='cls-1' cx='2' cy='5' r='2'/><circle class='cls-1' cx='2' cy='11' r='2'/><circle class='cls-1' cx='8' cy='2' r='2'/><circle class='cls-1' cx='8' cy='8' r='2'/><circle class='cls-1' cx='8' cy='14' r='2'/></svg>") left center no-repeat;
+        background-size: 10px;
+
+        &:first-of-type{
+            padding-left: 20px;
+        }
+    }
+
+    div.c-drag-list{
+        padding:12px 0px 12px 20px;
+        border-bottom: solid 1px $light-gray;
+        &:last-of-type{
+            border-bottom: none;
+        }
+    }
+
+    & >li>ul{
+        background: $light-gray;
+        margin-left: 15px;
+        padding-left: 15px;
+        border-left: 2px solid $primary;
+    }
+
+}
